@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches of Me</title>
+    <style>
+        .henna-container {
+            display: inline-block; /* Keeps the hover area inline */
+            padding: 10px; /* Adds spacing for better hover interaction */
+            border: 2px solid #333; /* Optional: Makes the hover area visible */
+            cursor: pointer;
+        }
+
+        .henna {
+            display: none;
+            width:400px; /* Adjust size as needed */
+        }
+
+        /* .henna-container:hover .henna {
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <p>Click on the boxes</p>
+    <div class="henna-container" id="henna-button1">
+        <img class="henna" id="henna1-image" src="food1.jpg" alt="Description of the image">
+    </div>
+    <div class="henna-container" id="henna-button2">
+        <img class="henna" id="henna2-image" src="food2.jpg" alt="Description of the image">
+    </div>
+    <div class="henna-container" id="henna-button3">
+        <img class="henna" id="henna3-image" src="food3.jpg" alt="Description of the image">
+    </div>
+    <div class="henna-container" id="henna-button4">
+        <img class="henna" id="henna4-image" src="food4.jpg" alt="Description of the image">
+    </div>
+    <div class="henna-container" id="henna-button5">
+        <img class="henna" id="henna5-image" src="food5.jpg" alt="Description of the image">
+    </div>
+    <div class="henna-container">
+        <a href="home.html" class="branch">Back</a>
+    </div>
+
+    <script>
+        document.getElementById("henna-button1").addEventListener("click", function() {
+            document.getElementById("henna1-image").style.display = "block";
+            document.getElementById("henna2-image").style.display = "none";
+            document.getElementById("henna3-image").style.display = "none";
+            document.getElementById("henna4-image").style.display = "none";
+            document.getElementById("henna5-image").style.display = "none";
+        });
+        document.getElementById("henna-button2").addEventListener("click", function() {
+            document.getElementById("henna1-image").style.display = "none";
+            document.getElementById("henna2-image").style.display = "block";
+            document.getElementById("henna3-image").style.display = "none";
+            document.getElementById("henna4-image").style.display = "none";
+            document.getElementById("henna5-image").style.display = "none";
+        });
+        document.getElementById("henna-button3").addEventListener("click", function() {
+            document.getElementById("henna1-image").style.display = "none";
+            document.getElementById("henna2-image").style.display = "none";
+            document.getElementById("henna3-image").style.display = "block";
+            document.getElementById("henna4-image").style.display = "none";
+            document.getElementById("henna5-image").style.display = "none";
+        });
+        document.getElementById("henna-button4").addEventListener("click", function() {
+            document.getElementById("henna1-image").style.display = "none";
+            document.getElementById("henna2-image").style.display = "none";
+            document.getElementById("henna3-image").style.display = "none";
+            document.getElementById("henna4-image").style.display = "block";
+            document.getElementById("henna5-image").style.display = "none";
+        });
+        document.getElementById("henna-button5").addEventListener("click", function() {
+            document.getElementById("henna1-image").style.display = "none";
+            document.getElementById("henna2-image").style.display = "none";
+            document.getElementById("henna3-image").style.display = "none";
+            document.getElementById("henna4-image").style.display = "none";
+            document.getElementById("henna5-image").style.display = "block";
+        });
+    </script>
+</body>
+</html>
