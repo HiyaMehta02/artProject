@@ -5,36 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branches of Me</title>
     <style>
-        .henna-container {
+        .music-container {
             display: inline-block; /* Keeps the hover area inline */
             padding: 10px; /* Adds spacing for better hover interaction */
             border: 2px solid #333; /* Optional: Makes the hover area visible */
             cursor: pointer;
         }
 
-        .henna {
+        .music {
             display: none;
-            width:700px; /* Adjust size as needed */
-        }
-
-        .henna-container:hover .henna {
-            display: block;
+            width:400px;
         }
     </style>
 </head>
 <body>
-
-    <div class="henna-container">
-        <img class="henna" src="music1.jpg" alt="Description of the image">
+    <p>Click on the squares</p>
+    <div class="music-container" id="music-button1">
+        <img class="music" id="music1-image" src="music1.jpg" alt="Description of the image">
     </div>
-    <div class="henna-container">
-        <img class="henna" src="music2.jpg" alt="Description of the image">
+    <div class="music-container" id="music-button2">
+        <img class="music" id="music2-image" src="music2.jpg" alt="Description of the image">
     </div>
-    <div class="henna-container">
-        <img class="henna" src="music3.jpg" alt="Description of the image">
+    <div class="music-container" id="music-button3">
+        <img class="music" id="music3-image" src="music3.jpg" alt="Description of the image">
     </div>
-    <div class="henna-container">
+    <div class="music-container">
         <a href="home.html" class="branch">Back</a>
     </div>
+
+    <script>
+        document.getElementById("music-button1").addEventListener("click", function() {
+            document.getElementById("music1-image").style.display = "block";
+            document.getElementById("music2-image").style.display = "none";
+            document.getElementById("music3-image").style.display = "none";
+            document.getElementById("music4-image").style.display = "none";
+            document.getElementById("music5-image").style.display = "none";
+        });
+        document.getElementById("music-button2").addEventListener("click", function() {
+            document.getElementById("music1-image").style.display = "none";
+            document.getElementById("music2-image").style.display = "block";
+            document.getElementById("music3-image").style.display = "none";
+            document.getElementById("music4-image").style.display = "none";
+            document.getElementById("music5-image").style.display = "none";
+        });
+        document.getElementById("music-button3").addEventListener("click", function() {
+            document.getElementById("music1-image").style.display = "none";
+            document.getElementById("music2-image").style.display = "none";
+            document.getElementById("music3-image").style.display = "block";
+            document.getElementById("music4-image").style.display = "none";
+            document.getElementById("music5-image").style.display = "none";
+        });
+    </script>
 </body>
 </html>
