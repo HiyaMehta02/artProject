@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches of Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        .tree-img {
+            width: 100%;
+            max-width: 600px;
+        }
+        .buttons {
+            position: relative;
+            margin-top: -500px; /* Moves buttons closer to the bottom */
+            padding-bottom: 20px;
+        }
+        .branch-container {
+            position: relative;
+            display: inline-block;
+        }
+        .branch {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            width: 300px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+        .henna-button-container {
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="tree.png" alt="Description of the image" class="tree-img">
+    </div>
+    <div class="buttons">
+        <div class="branch-container">
+            <a class="branch" id="hiyaMehtaButton">My Alternative Future Paths</a>
+        </div>
+        <div class="branch-container henna-button-container" id="softwareButtonContainer">
+            <a href="software.html" class="branch">Software Developer</a>
+        </div>
+        <div class="branch-container henna-button-container" id="hennaButtonContainer">
+            <a href="henna.html" class="branch">Henna Artist</a>
+        </div>
+        <div class="branch-container henna-button-container" id="danceButtonContainer">
+            <a href="food.html" class="branch">Cook</a>
+        </div>
+        <div class="branch-container henna-button-container" id="musicButtonContainer">
+            <a href="music.html" class="branch">Musician</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("hiyaMehtaButton").addEventListener("click", function() {
+            document.getElementById("hiyaMehtaButton").style.display = "none";
+            document.getElementById("hennaButtonContainer").style.display = "block";
+            document.getElementById("danceButtonContainer").style.display = "block";
+            document.getElementById("musicButtonContainer").style.display = "block";
+            document.getElementById("softwareButtonContainer").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
